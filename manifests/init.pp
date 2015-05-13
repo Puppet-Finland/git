@@ -3,6 +3,11 @@
 #
 # Install and configure Git
 #
+# == Parameters
+#
+# [*manage*]
+#   Manage Git using Puppet. Valid values are 'yes' (default) and 'no'.
+#
 # == Authors
 #
 # Samuli Seppänen <samuli.seppanen@gmail.com>
@@ -13,10 +18,12 @@
 #
 # BSD-license. See file LICENSE for details.
 #
-class git {
-
-# Rationale for this is explained in init.pp of the sshd module
-if hiera('manage_git', 'true') != 'false' {
-    include git::install
+class git
+(
+    $manage = 'yes'
+)
+{
+if $manage == 'yes' {
+    include ::git::install
 }
 }

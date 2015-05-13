@@ -1,0 +1,11 @@
+{
+  "name": "puppetfinland-git",
+  "version": "0.1.1",
+  "author": "Puppet-Finland team",
+  "license": "BSD license",
+  "summary": "Setup git",
+  "source": "https://github.com/Puppet-Finland/git.git",
+  "project_page": "https://github.com/Puppet-Finland/git",
+  "dependencies": [
+  ]
+}

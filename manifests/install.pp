@@ -3,12 +3,10 @@
 #
 # Install Git
 #
-class git::install {
-
-    include git::params
+class git::install inherits git::params {
 
     package { 'git-git':
-        name => "${::git::params::package_name}",
         ensure => installed,
+        name   => $::git::params::package_name,
     }
 }

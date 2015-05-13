@@ -12,8 +12,8 @@ class git::params {
         'Debian': {
             $package_name = 'git-core'
         }
-        default: { 
-            $package_name = 'git-core'
+        default: {
+            fail("Unsupported operating system ${::osfamily}")
         }
     }
 }
